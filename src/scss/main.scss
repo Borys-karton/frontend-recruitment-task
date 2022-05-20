@@ -1,3 +1,66 @@
-*{
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+/*       Fonts       */
+$mainFont:          "Roboto", sans-serif; 
+$headerWeight:      700;
+$textWeight:        300;
+$buttonTextWeight:  700;
+$regularSize:       16px;
+
+
+/*       Colors       */
+$buttonColor:       #E4C1AE;
+$buttonText:        #FFFFFF;
+$textColor:         #121212;
+$buttonActive:      #d9a78c;
+$buttonHoverText:   #e6e6e6;
+$buttonActiveText:  #bfbfbf;
+
+html {
+    font-size:      $regularSize;
+}
+.module{
+    display:            flex;
+    margin-top:         96px;
+    max-width:          1440px;
+    margin-left:        auto;
+    margin-right:       auto;
+}
+.module>.rightSide{
+    margin-top:         auto;
+    margin-bottom:      auto;
+    margin-left:        95px;
+    max-width:          380px;
+}
+.module>.rightSide>h1{
+    font-family:        $mainFont;
+    font-weight:        $headerWeight;
+    font-size:          2.625rem;
+    color:              $textColor;
+}
+.module>.rightSide>p{
+    font-family:        $mainFont;
+    color:              $textColor;
+    line-height:        24px;
+}
+.generalBtn{
+    font-family:        $mainFont;
+    background-color:   $buttonColor;
+    color:              $buttonText;
+    border-radius:      32px;
+    border-width:       0px;
+    width:              128px;
+    height:             48px;
+    font-weight:        $headerWeight;
+    font-size:          1rem;
+    line-height:        16px;
+        &:hover{
+            outline:    1px, solid, $textColor;
+            color:      $buttonHoverText;
+        }
+        &:active{
+            background-color: $buttonActive;
+            color: $buttonActiveText;
+            outline:    1px, solid, $textColor;
+        }
 }
