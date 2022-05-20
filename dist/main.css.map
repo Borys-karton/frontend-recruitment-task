@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css","sourcesContent":[]}
+{"version":3,"sources":["main.scss","main.css"],"names":[],"mappings":"AAAA,EACI,SCCJ","file":"main.css","sourcesContent":["*{\r\n    color: red;\r\n}","* {\n  color: red;\n}"]}
