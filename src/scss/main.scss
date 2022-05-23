@@ -10,8 +10,8 @@ $regularSize:       16px;
 
 /*       Colors       */
 $buttonColor:       #E4C1AE;
-$buttonText:        #FFFFFF;
-$textColor:         #121212;
+$white:             #FFFFFF;
+$black:             #121212;
 $buttonActive:      #d9a78c;
 $buttonHoverText:   #e6e6e6;
 $buttonActiveText:  #bfbfbf;
@@ -19,48 +19,92 @@ $buttonActiveText:  #bfbfbf;
 html {
     font-size:      $regularSize;
 }
+
+/*      Main content        */
+
 .module{
-    display:            flex;
-    margin-top:         96px;
-    max-width:          1440px;
-    margin-left:        auto;
-    margin-right:       auto;
+    h1{
+        font-family:            $mainFont;
+        font-weight:            $headerWeight;
+        font-size:              2.625rem;
+        color:                  $black;
+        line-height:            50.4px;
+    }
+    p{
+        font-family:            $mainFont;
+        color:                  $black;
+        line-height:            24px;
+    }
+    .mainContent{
+        display:                flex;
+        margin-top:             96px;
+        max-width:              1440px;
+        margin-left:            auto;
+        margin-right:           auto;
+        .rightSide{
+            margin-top:         auto;
+            margin-bottom:      auto;
+            margin-left:        95px;
+            max-width:          380px;
+        }
+    }
 }
-.module>.rightSide{
-    margin-top:         auto;
-    margin-bottom:      auto;
-    margin-left:        95px;
-    max-width:          380px;
+
+/*      Alert       */
+
+.module .alertBackground{
+    //display:                    none;
+    position:                   absolute;
+    background-color:           rgba($black,0.5);
+    width:                      100%;
+    height:                     100%;
+    inset:                      0;
+    z-index:                    1;
+    .alertContent{
+        min-width:              40%;
+        position:               absolute;
+        background-color:       $white;
+        left:                   50%;
+        top:                    50%;
+        transform:              translate(-50%,-50%);
+        padding:                46px 46px 56px 95px;
+        h1{
+            margin: 0;
+        }
+    }
 }
-.module>.rightSide>h1{
-    font-family:        $mainFont;
-    font-weight:        $headerWeight;
-    font-size:          2.625rem;
-    color:              $textColor;
-}
-.module>.rightSide>p{
-    font-family:        $mainFont;
-    color:              $textColor;
-    line-height:        24px;
-}
+
+/*      Buttons     */
+
 .generalBtn{
-    font-family:        $mainFont;
-    background-color:   $buttonColor;
-    color:              $buttonText;
-    border-radius:      32px;
-    border-width:       0px;
-    width:              128px;
-    height:             48px;
-    font-weight:        $headerWeight;
-    font-size:          1rem;
-    line-height:        16px;
+    font-family:                $mainFont;
+    background-color:           $buttonColor;
+    color:                      $white;
+    border-radius:              32px;
+    border-width:               0px;
+    width:                      128px;
+    height:                     48px;
+    font-weight:                $headerWeight;
+    font-size:                  1rem;
+    line-height:                16px;
         &:hover{
-            outline:    1px, solid, $textColor;
-            color:      $buttonHoverText;
+            outline:            1px, solid, $black;
+            color:              $buttonHoverText;
         }
         &:active{
-            background-color: $buttonActive;
-            color: $buttonActiveText;
-            outline:    1px, solid, $textColor;
+            background-color:   $buttonActive;
+            color:              $buttonActiveText;
+            outline:            1px, solid, $black;
+        }
+}
+.closeButton{
+    color:                      $black;
+    font-size:                  2.4rem;
+    text-align:                 right;
+    margin-block-start:         0;
+    margin-block-end:           0;
+    margin:                     0;
+        &:hover{
+            cursor:             pointer;
         }
 }
