@@ -10,7 +10,7 @@ $regularSize:       16px;
 
 /*       Colors       */
 $buttonColor:       #E4C1AE;
-$white:             #FFFFFF;
+$white:             #FFF;
 $black:             #121212;
 $buttonActive:      #d9a78c;
 $buttonHoverText:   #e6e6e6;
@@ -70,6 +70,12 @@ html {
         padding:                46px 46px 56px 95px;
         h1{
             margin: 0;
+        }
+        .table{
+            display: none;
+        }
+        .loadSection{
+            display: none;
         }
     }
 }

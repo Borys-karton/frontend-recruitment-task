@@ -25,11 +25,25 @@
             </div>
 
             <div class="alertBackground" id="alertWindow">
-                <div class="alertContent">
+                <div class="alertContent" id="alertContent">
                     <h2 class="closeButton" id="closeButton">&times;</h2>
                     <h1>Alert!</h1>
                     <p>You have clicked <b><span id="clickCount">0</span> times</b> to related button.</p>
                     <button class="generalBtn" id="resetCountBtn">Reset</button>
+                    <div id="loadBar" class="loadSection">
+                        <label for="load">loading</label>
+                        <progress id="load"></progress>
+                    </div>
+                    <table id="table" class="table">
+                        <thead>
+                            <th>Full name</th>
+                            <th>E-mail</th>
+                            <th>Address</th>
+                            <th>Phone number</th>
+                            <th>Company name</th>
+                        </thead>
+                        <tbody id="tableData"></tbody>
+                    </table>
                 </div>
             </div>
         </section>
