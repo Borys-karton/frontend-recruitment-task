@@ -13,7 +13,9 @@
 
             <div class="mainContent">
                 <picture>
-                    <img src="images\sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg" alt="beach and sea image">
+                    <source media="(max-width: 500px)" srcset="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg">
+                    <source media="(max-width: 1100px)" srcset="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg">
+                    <img src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg" alt="beach and sea image">
                 </picture>
                 <div class="rightSide">
                     <h1>Lorem ipsum</h1>
@@ -26,7 +28,7 @@
 
             <div class="alertBackground" id="alertWindow">
                 <div class="alertContent" id="alertContent">
-                    <h2 class="closeButton" id="closeButton">&times;</h2>
+                    <button class="closeButton" id="closeButton" >&times;</button>
                     <h1>Alert!</h1>
                     <p>You have clicked <b><span id="clickCount">0</span> times</b> to related button.</p>
                     <button class="generalBtn" id="resetCountBtn">Reset</button>
@@ -36,11 +38,13 @@
                     </div>
                     <table id="table" class="table">
                         <thead>
-                            <th>Full name</th>
-                            <th>E-mail</th>
-                            <th>Address</th>
-                            <th>Phone number</th>
-                            <th>Company name</th>
+                            <tr>
+                                <th>Full name</th>
+                                <th>E-mail</th>
+                                <th>Address</th>
+                                <th>Phone number</th>
+                                <th>Company name</th>
+                            </tr>
                         </thead>
                         <tbody id="tableData"></tbody>
                     </table>
@@ -50,5 +54,5 @@
     </main>
 
 
-    <script type="text/javascript" src="dist/all.js"></script>
+    <script src="dist/all.js"></script>
 </body>

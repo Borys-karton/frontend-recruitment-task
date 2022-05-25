@@ -98,4 +98,4 @@ const fillTableWithContent = async () =>{
         }
     }
 };
-fillTableWithContent();
+window.addEventListener("load",fillTableWithContent);
